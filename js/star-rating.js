@@ -8,23 +8,7 @@
  * Licensed under the BSD 3-Clause
  * https://github.com/kartik-v/bootstrap-star-rating/blob/master/LICENSE.md
  */
-(function (factory) {
-    "use strict";
-    //noinspection JSUnresolvedVariable
-    if (typeof define === 'function' && define.amd) { // jshint ignore:line
-        // AMD. Register as an anonymous module.
-        define(['jquery'], factory); // jshint ignore:line
-    } else { // noinspection JSUnresolvedVariable
-        if (typeof module === 'object' && module.exports) { // jshint ignore:line
-            // Node/CommonJS
-            // noinspection JSUnresolvedVariable
-            module.exports = factory(require('jquery')); // jshint ignore:line
-        } else {
-            // Browser globals
-            factory(window.jQuery);
-        }
-    }
-}(function ($) {
+(function ($) {
     "use strict";
 
     $.fn.ratingLocales = {};
@@ -616,4 +600,4 @@
             $input.removeClass('rating-loading').addClass('rating-loading').rating();
         }
     });
-}));
+})(jQuery);
